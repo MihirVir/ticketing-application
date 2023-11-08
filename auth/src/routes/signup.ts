@@ -42,7 +42,7 @@ router.post("/api/users/signup", [
     const user_jwt = jwt.sign({
         id: user.id,
         email: user.email
-    }, "asdf");
+    }, process.env.JWT_KEY!);
 
     req.session = {
         jwt: user_jwt
@@ -52,4 +52,4 @@ router.post("/api/users/signup", [
 });
 
 
-export {router as signupRouter}
+export { router as signupRouter }
