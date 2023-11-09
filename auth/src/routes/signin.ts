@@ -37,7 +37,7 @@ router.post("/api/users/signin", [
 
     return res
             .status(200)
-            .send(existing_user);
+            .send({existing_user});
 });
 
 
